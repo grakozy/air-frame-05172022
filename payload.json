@@ -1,0 +1,199 @@
+[
+  {
+    "started_time": "2022-05-17T17:28:41.475Z",
+    "journey_behavior": "Created new journey",
+    "session_id": "b2fc6baa-8a93-4520-ad97-6072fd7ad64c",
+    "canvas_link": "https://app.airkit.com/u/yv1YDR7n48Si52LhukjkC?",
+    "url": "https://app.airkit.com/u/yv1YDR7n48Si52LhukjkC?",
+    "expiration_time": "2022-06-16T17:28:41.511",
+    "state": {
+      "viewState": {
+        "schema": "",
+        "name": "root",
+        "id": "rootState",
+        "children": {
+          "48906513-7543-47b5-a78d-d8de7b089e42": {
+            "schema": "/element/activity-group/web-activity-group.json",
+            "state": {
+              "currentActivityId": "2af66f0d-b098-49e4-a3fa-cc619a2c568c"
+            },
+            "name": "Web Flow",
+            "children": {
+              "2af66f0d-b098-49e4-a3fa-cc619a2c568c": {
+                "schema": "/element/activity/page-activity.json",
+                "state": {},
+                "name": "Web Page",
+                "children": {},
+                "id": "2af66f0d-b098-49e4-a3fa-cc619a2c568c"
+              }
+            },
+            "id": "48906513-7543-47b5-a78d-d8de7b089e42"
+          }
+        },
+        "state": {}
+      },
+      "activityGroups": {
+        "48906513-7543-47b5-a78d-d8de7b089e42": {
+          "name": null,
+          "__activityGroup": "Web Flow",
+          "__id": "48906513-7543-47b5-a78d-d8de7b089e42"
+        }
+      },
+      "scheduledActions": {
+        "scheduledTriggerIds": {},
+        "timers": {}
+      },
+      "assets": {},
+      "session": {
+        "start": {
+          "marco": "polo"
+        },
+        "id": "b2fc6baa-8a93-4520-ad97-6072fd7ad64c",
+        "timeZone": "America/Los_Angeles",
+        "locale": "en-US"
+      },
+      "voice": {},
+      "theme": {
+        "borderSizeSmall": "1px",
+        "brandPrimary": "#126be3",
+        "textPrimary": "#333333",
+        "fontSizeXSmall": "0.625rem",
+        "fontSizeSmall": "0.75rem",
+        "fontSizeXLarge": "2rem",
+        "lineHeightSmall": "1.4",
+        "textSecondary": "#777777",
+        "borderSizeMedium": "2px",
+        "timingSlow": "1s",
+        "spacingLarge": "16px",
+        "brandPrimaryTint3": "rgba(18, 109, 231, 0.1)",
+        "backgroundSecondary": "#f4f4f4",
+        "lineHeightMedium": "1.2",
+        "roundedCornerMedium": "4px",
+        "spacingMedium": "12px",
+        "brandError": "#e31212",
+        "fontSizeMedium": "1rem",
+        "fontSizeLarge": "1.5rem",
+        "roundedCornerLarge": "8px",
+        "borderPrimary": "#000000",
+        "borderSecondary": "rgba(0, 0, 0, 0.2)",
+        "brandPrimaryTint1": "#7aadf0",
+        "spacingSmall": "8px",
+        "spacingXSmall": "4px",
+        "spacingXLarge": "20px",
+        "backgroundPrimary": "#ffffff",
+        "timingQuick": "100ms",
+        "roundedCornerSmall": "2px",
+        "brandPrimaryTint2": "#d0e2fa",
+        "brandPrimaryFont": "Inter",
+        "borderSizeLarge": "4px",
+        "timingMedium": "500ms"
+      },
+      "eventSubscriptions": {},
+      "metadata": {},
+      "matchers": {},
+      "timers": {},
+      "validation": {
+        "2af66f0d-b098-49e4-a3fa-cc619a2c568c": {
+          "__activity": "Web Page",
+          "__id": "2af66f0d-b098-49e4-a3fa-cc619a2c568c"
+        }
+      },
+      "channels": {
+        "web": {
+          "url": "https://app.airkit.com/u/yv1YDR7n48Si52LhukjkC?",
+          "canvasLink": "https://app.airkit.com/u/yv1YDR7n48Si52LhukjkC?",
+          "identifier": null
+        },
+        "voice": {
+          "identifier": null
+        },
+        "message": {
+          "identifier": null
+        }
+      },
+      "error": {},
+      "layers": [
+        {
+          "id": "8dff340c-5568-43f1-9f03-558e62468e0b",
+          "name": "default",
+          "layoutInstance": {
+            "layoutId": "db061fed-7ea2-48cc-afea-3292514200cc",
+            "slots": {
+              "58b515be-a33a-4fd1-ba38-4251779e3246": "48906513-7543-47b5-a78d-d8de7b089e42"
+            },
+            "$schema": "/element/layout-instance.json",
+            "id": "acc4bec3-35dd-4e11-a144-4e6612ee28ec"
+          },
+          "$schema": "/element/layer.json"
+        }
+      ],
+      "profile": {
+        "web-resource": "6d778e09-1f0e-4612-b6ee-2f1313ab18eb",
+        "authenication-app-redirect-url": "",
+        "datastore": {
+          "id": "56792cfb-bc10-4b2d-9dd9-20cb99b1f713",
+          "version": 0
+        },
+        "canvas-expired-session-html": "",
+        "base-domain": {
+          "id": "860ebfb1-2fe1-4403-ac4c-5a7298927e5f",
+          "$schema": "/element/configuration/base-domain-configuration.json",
+          "domainId": "6d778e09-1f0e-4612-b6ee-2f1313ab18eb"
+        },
+        "canvas-title": "Untitled App",
+        "canvas-link-length": 21,
+        "custom-app-authentication-saml-metadata-id": "",
+        "canvas-saml-metadata-id": "",
+        "app-authentication-method": "custom",
+        "web-link": {
+          "resourceId": "6d778e09-1f0e-4612-b6ee-2f1313ab18eb"
+        },
+        "encryption-key": "1da4c894-30a2-43b3-a642-573c4c26c8ed",
+        "voice-locked-behavior": "BUSY_SIGNAL",
+        "session-expiration-time": {
+          "date": {
+            "day": 16,
+            "month": 6,
+            "year": 2022
+          },
+          "time": {
+            "hour": 17,
+            "minute": 28,
+            "second": 41,
+            "millisecond": 464
+          },
+          "timeZone": "UTC"
+        },
+        "oauth-configuration": {
+          "vendor": "",
+          "clientId": "",
+          "baseAuthServerUrl": ""
+        },
+        "environment": "PROD",
+        "app-auth-type": "public",
+        "org-auth-user-saml": false,
+        "locale": "en-US",
+        "Created for 71ef8595-ba83-4808-b77a-d73f8b657c74": "7a87db75-23ba-4f2b-88c4-2df3f1df9aee",
+        "time-zone": "America/Los_Angeles"
+      },
+      "actor": {
+        "marco": "polo"
+      },
+      "activities": {
+        "2af66f0d-b098-49e4-a3fa-cc619a2c568c": {
+          "text_input": null,
+          "__activity": "Web Page",
+          "__id": "2af66f0d-b098-49e4-a3fa-cc619a2c568c"
+        }
+      },
+      "sessionDidStart": true,
+      "journey": {
+        "totalSteps": 1,
+        "metadata": {
+          "2a601d0e-a0c7-4056-ae70-a825f5246201": "Journey Step 1"
+        },
+        "currentStepId": "2a601d0e-a0c7-4056-ae70-a825f5246201"
+      }
+    }
+  }
+]

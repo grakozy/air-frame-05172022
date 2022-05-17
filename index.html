@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>APL API Playground Sample Application</title>
+    <style>
+      body {
+        background-color: green;
+      }
+      .container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        /* transform: translateY(-50%); */
+      }
+
+      #overlay {
+        background-color: grey;
+        z-index: -1;
+        padding: 25px;
+        display: none;
+      }
+
+      .vertical-center {
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #btn {
+        font-size: 25px;
+      }
+      #airkit {
+        width: 75%;
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        z-index: 40;
+        background-color: #ff4e83;
+        align-items: center;
+        display: none;
+      }
+
+      #exit-airkit {
+        display: none;
+        margin: 15px;
+      }
+    </style>
+    <script src="https://client.airkit.com/18/air-client.js"></script>
+    <script type="text/javascript" lang="javascript">
+      var sessionId
+      var startParams = { name: 'Airkit' }
+
+      // This would be similar to reading the response data from the API call
+      function readJson() {
+        console.log('reading json')
+        fetch('./payload.json')
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('HTTP error ' + response.status)
+            }
+            return response.json()
+          })
+          .then((json) => {
+            console.log('reading json.session_id: ' + json[0].session_id)
+            var sessionId = json[0].session_id
+            console.log(sessionId)
+            var iframe = document.getElementsByName('airkit')
+            // create iframe
+            createAirkit()
+            // populate iframe
+            Airkit.createClient(
+              'us:2f2c70a5-b063-4d2f-8061-b42a8e32dd7a',
+              iframe[0],
+            ).then((client) => {
+              // lookup and join session by id
+              client.join(sessionId)
+            })
+          })
+          .catch(function () {
+            this.dataError = true
+          })
+      }
+
+      // custom launch trigger
+      function createAirkit() {
+        document.getElementById('airkit').style.display = 'block'
+        document.getElementById('exit-airkit').style.display = 'block'
+        document.getElementById('overlay').style.display = 'block'
+      }
+
+      // custom exit trigger
+      function exitAirkit() {
+        document.getElementById('airkit').style.display = 'none'
+        document.getElementById('exit-airkit').style.display = 'none'
+        document.getElementById('overlay').style.display = 'none'
+        document.getElementById('exit-airkit').style.margin = '25px'
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="vertical-center">
+        <button
+          id="btn"
+          type="button"
+          target="airkit"
+          onclick="javascript:readJson()"
+        >
+          Launcher
+        </button>
+      </div>
+    </div>
+    <div id="overlay">
+      <div>
+        <button id="exit-airkit" onclick="javascript:exitAirkit()">Exit</button>
+      </div>
+      <iframe
+        id="airkit"
+        class="hidden"
+        name="airkit"
+        style="border: 4px solid #ff4e83;"
+      ></iframe>
+    </div>
+  </body>
+</html>
